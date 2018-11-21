@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 14 nov. 2018 à 13:51
+-- Généré le :  mer. 21 nov. 2018 à 13:08
 -- Version du serveur :  5.7.23
 -- Version de PHP :  7.2.10
 
@@ -37,6 +37,21 @@ CREATE TABLE IF NOT EXISTS `super_admin` (
   `telephone` int(10) NOT NULL,
   `password` text CHARACTER SET utf8mb4 NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `utilisateurs`
+--
+
+DROP TABLE IF EXISTS `utilisateurs`;
+CREATE TABLE IF NOT EXISTS `utilisateurs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `login` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `statut` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
